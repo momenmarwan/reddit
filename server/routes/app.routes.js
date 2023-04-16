@@ -1,7 +1,10 @@
+/* eslint-disable new-cap */
 const express = require('express');
 const router = express.Router();
-const {hello} = require('../controllers/index');
+const {signup, login, logout} = require('../controllers/index');
 
-router.get('/', hello);
+router.post('/signup', signup);
+router.post('/login', login);
+router.get('/logout', logout);
 
 module.exports = {router};
