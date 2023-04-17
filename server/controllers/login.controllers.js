@@ -10,12 +10,13 @@ const login = (req, res, next) => {
       .then(({rows}) => {
         if (rows.length) {
           req.userID = rows[0].id;
+          console.log(req.userID);
           return compare(password, rows[0].password);
         };
       })
       .then((isMatch) => {
         if (!isMatch) throw customError(401, 'the password is wrong');
-        return jwtSignAsync(email, username);
+        return jwtSignAsync(email, req.userID, username);
       })
       .then((token) => {
         res.cookie('token', token);
@@ -25,7 +26,7 @@ const login = (req, res, next) => {
         });
       })
       .catch((error) => {
-        next(error);
+        res.json(error);
       });
 };
 
