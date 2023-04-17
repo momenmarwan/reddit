@@ -1,4 +1,3 @@
-/* eslint-disable max-len */
 const {verifyAsync} = require('../utils/index');
 const checkAuth = (req, res, next) => {
   const {cookies: {token}} = req;
@@ -9,6 +8,7 @@ const checkAuth = (req, res, next) => {
         next();
       })
       .catch((error) => {
+        // eslint-disable-next-line max-len
         if (!token) res.status(401).json({status: 401, massage: 'unauthorized'});
       });
 };
