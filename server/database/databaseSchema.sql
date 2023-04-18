@@ -12,8 +12,7 @@ CREATE TABLE posts(
     id SERIAL PRIMARY KEY,
     content TEXT NOT NULL,
     img_url TEXT,
-    comments_number INTEGER,
-    post_date TIMESTAMP NOT NULL  DEFAULT NOW(),
+    created_at TIMESTAMP NOT NULL  DEFAULT NOW(),
     user_id INTEGER REFERENCES users(id) ON DELETE CASCADE
 );
 
@@ -22,12 +21,13 @@ CREATE TABLE comments(
     content text,
     comment_date TIMESTAMP NOT NULL  DEFAULT NOW(),
     post_id INTEGER REFERENCES posts(id) ON DELETE CASCADE,
-    user_id = INTEGER REFERENCES users(id) ON DELETE CASCADE
+    user_id  INTEGER REFERENCES users(id) ON DELETE CASCADE
 );
 CREATE TABLE post_votes(
     id SERIAL PRIMARY KEY,
     user_id INTEGER REFERENCES users(id) ON DELETE CASCADE,
     post_id INTEGER REFERENCES posts(id) ON DELETE CASCADE,
+    vote_status BOOLEAN ,
     CONSTRAINT unique_combination_post UNIQUE (user_id, post_id)
 );
 
