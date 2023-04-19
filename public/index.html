@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&family=Noto+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Tajawal:wght@200;300;400;500;700;800;900&family=Work+Sans:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reddit Clone</title>
+</head>
+<body>
+  <header class="header" >
+      <div class="left-side">
+        <div class="logo">
+          <i class="fa-brands fa-reddit"></i>
+          <svg class="_1bWuGs_1sq4Pqy099x_yy-" style="width: 60px; heigth:200px"  viewBox="0 0 57 18" xmlns="http://www.w3.org/2000/svg"><g fill="#1c1c1c"><path d="M54.63,16.52V7.68h1a1,1,0,0,0,1.09-1V6.65a1,1,0,0,0-.93-1.12H54.63V3.88a1.23,1.23,0,0,0-1.12-1.23,1.2,1.2,0,0,0-1.27,1.11V5.55h-1a1,1,0,0,0-1.09,1v.07a1,1,0,0,0,.93,1.12h1.13v8.81a1.19,1.19,0,0,0,1.19,1.19h0a1.19,1.19,0,0,0,1.25-1.12A.17.17,0,0,0,54.63,16.52Z"></path><circle fill="#FF4500" cx="47.26" cy="3.44" r="2.12"></circle><path d="M48.44,7.81a1.19,1.19,0,1,0-2.38,0h0v8.71a1.19,1.19,0,0,0,2.38,0Z"></path><path d="M30.84,1.19A1.19,1.19,0,0,0,29.65,0h0a1.19,1.19,0,0,0-1.19,1.19V6.51a4.11,4.11,0,0,0-3-1.21c-3.1,0-5.69,2.85-5.69,6.35S22.28,18,25.42,18a4.26,4.26,0,0,0,3.1-1.23,1.17,1.17,0,0,0,1.47.8,1.2,1.2,0,0,0,.85-1.05ZM25.41,15.64c-1.83,0-3.32-1.77-3.32-4s1.48-4,3.32-4,3.31,1.78,3.31,4-1.47,3.95-3.3,3.95Z"></path><path d="M43.28,1.19A1.19,1.19,0,0,0,42.09,0h0a1.18,1.18,0,0,0-1.18,1.19h0V6.51a4.15,4.15,0,0,0-3-1.21c-3.1,0-5.69,2.85-5.69,6.35S34.72,18,37.86,18A4.26,4.26,0,0,0,41,16.77a1.17,1.17,0,0,0,1.47.8,1.19,1.19,0,0,0,.85-1.05ZM37.85,15.64c-1.83,0-3.31-1.77-3.31-4s1.47-4,3.31-4,3.31,1.78,3.31,4-1.47,3.95-3.3,3.95Z"></path><path d="M17.27,12.44a1.49,1.49,0,0,0,1.59-1.38v-.15a4.81,4.81,0,0,0-.1-.85A5.83,5.83,0,0,0,13.25,5.3c-3.1,0-5.69,2.85-5.69,6.35S10.11,18,13.25,18a5.66,5.66,0,0,0,4.39-1.84,1.23,1.23,0,0,0-.08-1.74l-.11-.09a1.29,1.29,0,0,0-1.58.17,3.91,3.91,0,0,1-2.62,1.12A3.54,3.54,0,0,1,10,12.44h7.27Zm-4-4.76a3.41,3.41,0,0,1,3.09,2.64H10.14A3.41,3.41,0,0,1,13.24,7.68Z"></path><path d="M7.68,6.53a1.19,1.19,0,0,0-1-1.18A4.56,4.56,0,0,0,2.39,6.91V6.75A1.2,1.2,0,0,0,0,6.75v9.77a1.23,1.23,0,0,0,1.12,1.24,1.19,1.19,0,0,0,1.26-1.1.66.66,0,0,0,0-.14v-5A3.62,3.62,0,0,1,5.81,7.7a4.87,4.87,0,0,1,.54,0h.24A1.18,1.18,0,0,0,7.68,6.53Z"></path></g></svg>
+        </div>
+      </div>
+      <div class="middle-side">
+        <div class="search-container">
+          <input type="text" placeholder="Search Reddit">
+          <i class="fas fa-search"></i>
+        </div>
+      </div>
+      <div class="right-side">
+        <button class="get-app"><i class="fa-solid fa-qrcode"></i>Get App</button>
+        <button class="login" >Log In</button>
+        <button class="button-icon"> <i class="fa-solid fa-user"></i></button>
+      </div>
+  </header>
+  <div class="asideAndMain">
+  <div class="nav-parentAndaside-bottom">
+    <aside>
+      <nav class="nav-parent" >
+        <p>feeds</p>
+        <a href="" class="nav-link">
+          <i class="fa-solid fa-house-chimney"></i>     
+          <span>Home</span>
+        </a>
+        <a href="" class="nav-link">
+          <i class="fa-solid fa-arrow-trend-up"></i>     
+              <span>explore</span>
+        </a>
+        <p>recent</p>
+        <a href="" class="nav-link">
+          <i class="fa-brands fa-twitter"></i>              <span>r/WhitePeopleTwitter</span>
+        </a>
+        <a href="" class="nav-link">
+          <i class="fa-solid fa-dog"></i>              <span>r/meirl</span>
+        </a>
+        <a href="" class="nav-link">
+          <i class="fa-light fa-r"></i>          
+              <span>r/wwi</span>
+        </a>
+        <p>topics</p>
+        <a href="" class="nav-link">
+          <i class="fa-solid fa-gamepad"></i>
+              <span>game</span>
+        </a>
+        <a href="" class="nav-link">
+          <i class="fa-solid fa-gamepad"></i>
+            <span>Sports</span>
+        </a>
+        <a href="" class="nav-link">
+          <i class="fa-solid fa-business-time"></i>            <span>business</span>
+        </a>
+        <a href="" class="nav-link">
+          <i class="fa-solid fa-qrcode"></i>            <span>business</span>
+        </a>
+      </nav>
+
+    </aside>
+    <hr style="height: 2px;">
+    <div class="aside-bottom">
+      <p>Create an account to follow your favorite communities and start taking part in conversations.</p>
+      <button>join Reddit</button>
+    </div>
+  </div>
+ 
+
+    <div class="main" >
+      <div class="trindAndCards" >
+        <p id="trind"  >Trending today</p>
+        <div class="cards" >
+          <div class="trinding-card1">
+              <div><b>Vladimir Putin</b></div>
+              <div>Declaration of war on Ukraine</div>
+              <div class="subtitle">
+                <img src="imges/biden.jpg" alt="" style="width: 15px; height: 15px; border-radius: 50%;">
+                <p style=" display: flex;">imfwepmfqof</p>
+              </div>
+          </div>  
+          <div class="trinding-card2">
+            <div><b>joe biden</b></div>
+            <div>joe biden vice president</div>
+            <div class="subtitle">
+              <img src="imges/biden.jpg" alt="" style="width: 15px; height: 15px; border-radius: 50%;">
+              <p style=" display: flex;">imfwepmfqof</p>
+            </div>  
+          </div>  
+        <div class="trinding-card3">
+          <div><b>lionel messi</b></div>
+          <div> the world champion</div>
+          <div class="subtitle">
+            <img src="imges/biden.jpg" alt="" style="width: 15px; height: 15px; border-radius: 50%;">
+            <p style=" display: flex;">imfwepmfqof</p>
+          </div>
+      </div>  
+      <div class="trinding-card4">
+        <div><b>shakira</b></div>
+        <div>famous songs</div>
+        <div class="subtitle">
+          <img src="imges/biden.jpg" alt="" style="width: 15px; height: 15px; border-radius: 50%;">
+          <p style=" display: flex;">imfwepmfqof</p>
+        </div>
+    </div>  
+        </div>
+      </div>  
+
+          <div class="posts">
+            <p>Popular posts </p>
+            <div class="Popular-Posts" style="display: flex; justify-content: space-between;">
+              <div class="Popular-Posts-left">
+              <div class="hot">
+                <i class="fa-sharp fa-solid fa-fire"></i>
+                 <b>Hot</b>
+              </div>
+              <div class="hot">
+                <b>Everywhere</b>
+                <i class="fa-solid fa-chevron-down"></i>
+              </div>
+              <div class="hot">
+                <i class="fa-sharp fa-solid fa-fire"></i>
+                 <b>New</b>
+              </div>
+              <div class="hot">
+                <i class="fa-sharp fa-solid fa-fire"></i>
+                 <b>Top</b>
+              </div>
+              <div class="hot">
+                <i class="fa-solid fa-ellipsis"></i>           
+              </div>
+            </div>
+            <div class="Popular-Posts-rigth">
+              <i class="fa-solid fa-ellipsis"></i>    
+              <i class="fa-solid fa-chevron-down"></i>
+            </div>
+       
+
+            </div>
+            
+            <div class="right-main">
+                <div class="sub-right-main">
+                  <p>POPULAR COMMUNITIES</p>
+                  <i class="fa-solid fa-chevron-down"></i>
+                </div>
+                <hr style="width: 100%;">
+                <div class="sub-right-main">
+                  <p>GAMING</p>
+                  <i class="fa-solid fa-chevron-down"></i>
+                </div>
+                <hr style="width: 100%;">
+                <div class="sub-right-main">
+                  <p>SPORTS</p>
+                  <i class="fa-solid fa-chevron-down"></i>
+                </div>
+                <hr style="width: 100%;">
+                <div class="sub-right-main">
+                  <p>TV</p>
+                  <i class="fa-solid fa-chevron-down"></i>
+                </div>
+                <hr style="width: 100%;">
+                <div class="sub-right-main">
+                  <p>TRAVEL</p>
+                  <i class="fa-solid fa-chevron-down"></i>
+                </div>
+                <hr style="width: 100%;">
+                <div class="sub-right-main">
+                  <p>HEALTH & FITNESS</p>
+                  <i class="fa-solid fa-chevron-down"></i>
+                </div>
+                <hr style="width: 100%;">
+                <div class="sub-right-main" style="margin-bottom: 36px;">
+                  <p>FASHION</p>
+                  <i class="fa-solid fa-chevron-down"></i>
+                </div>
+                <div class="discription">
+                  <p>User Agreement</p>
+                  <p style="left: 20px; display: none;">content policy</p>
+                  <p>User Agreement</p>
+
+                </div>
+
+                <div class="discription">
+                  <p style="margin-top: -30px;">Privacy Policy</p>
+                  <p>Moderator Code Of </p>
+                </div>
+                <div class="discription">
+                  <p style="visibility: hidden;">Privacy Policy</p>
+                  <p>Conduct</p>
+                </div>
+
+                <hr style="width: 90%; height: 2px; ">
+
+                <div class="cope-rights">
+                  <p>Reddit Inc © 2023. All rights reserved</p>
+                  
+                </div>
+            </div>
+
+          <div class="user-post">
+            <div class="content">
+              <div style="display: flex; margin-left: 10px;">
+                <img src="imges/buten.jpeg" alt="" style="width: 20px; height: 20px; border-radius: 50%; margin-top: 10px;">
+                <p style="margin-top: 10px; margin-left: px;">sfasfwqf</p>
+              </div>
+              <div class="middle-content">
+                <h3>What are you starting to dislike more as you get older?</h3>
+              </div>
+              <div class="botom-ctenont" >
+                <button class="commints" style="margin-left: 10px;">
+                  <div style="display: flex; justify-content: space-between;  ">
+                  <i style="display:flex; align-items: center; margin-right: 10px;" class="fa-solid fa-chevron-down"></i>
+                    <p>fsefwewf</p>
+                  </div>
+                </button>
+              </div>
+            </div>
+
+          </div>
+
+          </div>
+    </div>
+    <hr>
+
+    </div>
+
+  </div>
+ 
+  <div class="par">
+    <div class="log-container">
+      <span class="close">&times;</span>
+
+        <span class="login-span">Log In</span>
+        <p class="login-pargrph">By continuing, you agree are setting up a Reddit account and agree to our User Agreement and Privacy Policy.</p>
+        <input type="text" placeholder="username" class="login-username">
+        <input type="text" placeholder="email" class="login-email">
+        <input type="password" name="" id="" placeholder="Password" class="login-password">
+        <span>Forget your <a class="link" href="">username</a> or <a class="link" href="">password</a> ? </span>
+        <button class="login-btn">Log In</button>
+        <p>New to Reddit ? <button id='SignUpinSignin' type="button" style="background-color: white; border: none; color: #668EE0;">Sign Up</button>
+        </p>
+    </div>
+</div>
+
+<div class="par1">
+  <div class="log-container1">
+    <span class="close">&times;</span>
+
+      <span class="login-span1">Sign Up</span>
+      <p class="login-pargrph1">By continuing, you are setting up a Reddit account and agree to our User Agreement and Privacy Policy</p>
+      <input type="text" placeholder="Email" class="sginup-email">
+      <input type="text" placeholder="username" class="sginup-username">
+      <input type="password" placeholder="password" class="sginup-password">
+      <button class="sginup-btn1">Sign Up</button>
+      <p>Already a redditor? <button id='SignininSignUp' type="button" style="background-color: white; border: none; color: #668EE0;"> Log In</button>
+      </p>
+  </div>
+</div>
+
+    <script src="./javascript/dom.js"></script>
+    <script src="./javascript/script.js"></script>
+</body>
+</html>

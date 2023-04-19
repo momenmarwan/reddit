@@ -1,9 +1,10 @@
 const serverError = (error, req, res, next) => {
   if (error.status) {
-    res.status(error.status).json({massage: 'server error'});
+    res.status(error.status).json({massage: error, status: error.status});
   } else {
     res.status(500).json({
-      massage: 'server error',
+      massage: error,
+      status: error.status,
     });
   }
 };

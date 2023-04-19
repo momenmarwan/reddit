@@ -22,13 +22,15 @@ const signup = (req, res, next) => {
         return jwtSignAsync({email, username});
       })
       .then((token) => {
-        res.cookie(token, 'token');
+        res.cookie('token', token),
+        // eslint-disable-next-line max-len
         res.json({
           status: 201,
           massage: 'the user has been created successfully',
         });
       })
       .catch((error) => {
+        console.log(error);
         next(error);
       });
 };
