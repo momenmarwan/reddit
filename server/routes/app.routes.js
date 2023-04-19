@@ -11,7 +11,8 @@ router.post('/login', login);
 router.get('/logout', logout);
 router.post('/add-post', addPost);
 router.post('/add-comment', addComment);
-router.get('/home', checkAuth, (req, res) => {
+router.use('/home', checkAuth);
+router.get('/home', (req, res) => {
   res.sendFile(join(__dirname, '..', '..', 'public', 'pages', 'home.html'));
 });
 

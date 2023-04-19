@@ -9,6 +9,7 @@ const login = (req, res, next) => {
       .then(getUserByEmail)
       .then(({rows}) => {
         if (rows.length) {
+          req.userID = rows[0].id;
           // eslint-disable-next-line max-len
           if (rows[0].username == username) throw customError(401, 'the user name is wrong');
           return compare(password, rows[0].password);
@@ -16,6 +17,7 @@ const login = (req, res, next) => {
       })
       .then((isMatch) => {
         if (!isMatch) throw customError(401, 'the password is wrong');
+        console.log(email, req.userID, username);
         return jwtSignAsync(email, req.userID, username);
       })
       .then((token) => {
