@@ -6,9 +6,8 @@ const {customError} = require('../middleware/errorHandler.middleware');
 const signup = (req, res, next) => {
   const {body: {username, password, email}} = req;
   signupSchema.validateAsync({username, password, email})
-      .then(() => getUserByEmail({email}))
+      .then(getUserByEmail)
       .then(({rows}) => {
-        // eslint-disable-next-line max-len
         if (rows.length > 0) throw customError(400, 'The user is already exits');
         return hash(password, 10);
       })
@@ -23,14 +22,12 @@ const signup = (req, res, next) => {
       })
       .then((token) => {
         res.cookie('token', token),
-        // eslint-disable-next-line max-len
         res.json({
           status: 201,
           massage: 'the user has been created successfully',
         });
       })
       .catch((error) => {
-        console.log(error);
         next(error);
       });
 };

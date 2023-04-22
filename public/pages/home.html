@@ -1,14 +1,36 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home Page</title>
-</head>
-<body>
-    <h1>HEllo</h1>
-    <button class="logout">Logout</button>
-    <script src='../javascript/script.js'></script>
+    <!DOCTYPE html>
+    <html>
+  <head>
+      <title>Post Form and Card</title>
+      <link rel="stylesheet" href="../styles/home.css">
+  </head>
+  <body>
+    <div class="container">
+        <h1>HEllo</h1>
+        <button class="logout">Logout</button>
+      <form>
+        <label for="image-url">Image URL:</label>
+        <input type="url" id="image-url" class="img-input" name="image-url" placeholder="Enter image URL..." required>
+        
+        <label for="content">Content:</label>
+        <textarea id="content" class="content-input" name="content" rows="4" placeholder="Enter content..." required></textarea>
+        
+        <input class="add-post-btn" type="submit" value="Submit">
+      </form>
+      
+      <div class="card">
+        <img src="https://via.placeholder.com/350x150" alt="Post image">
+        <div class="card-content">
+          <h2 class="card-title">Post Title</h2>
+          <p class="card-text">Post Content</p>
+          <div class="card-vote">
+            <button class="upvote">Upvote</button>
+            <button class="downvote">Downvote</button>
+          </div>
+        </div>
+      </div>
+      
+</div>
+<script src='../javascript/addPost.js'></script>
 </body>
 </html>
