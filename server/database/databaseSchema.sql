@@ -27,7 +27,7 @@ CREATE TABLE post_votes(
     id SERIAL PRIMARY KEY,
     user_id INTEGER REFERENCES users(id) ON DELETE CASCADE,
     post_id INTEGER REFERENCES posts(id) ON DELETE CASCADE,
-    vote_status BOOLEAN ,
+    vote_status BOOLEAN,
     CONSTRAINT unique_combination_post UNIQUE (user_id, post_id)
 );
 
