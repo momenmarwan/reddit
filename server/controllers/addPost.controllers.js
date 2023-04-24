@@ -1,4 +1,3 @@
-/* eslint-disable max-len */
 const {addPostQuery} = require('../database/query/index');
 const {addPostSchema} = require('../utils/index');
 
