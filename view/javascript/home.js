@@ -6,6 +6,23 @@ document.addEventListener('DOMContentLoaded', () => {
   const contentInput = document.querySelector('.content');
   const imgUrl = document.querySelector('.img-url');
 
+
+  const voteFunction = ({postId, voteStatus}) => {
+    fetch('/post-vote', {
+      method: 'PUT',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify({
+        postId: postId,
+        status: voteStatus,
+      }),
+    })
+        .then((response) => response.json())
+        .then((response) => console.log(response))
+        .catch((error) => {
+          console.log(error);
+        });
+  };
+
   fetch('/get-posts')
       .then((response) => response.json())
       .then((response) => {
@@ -28,11 +45,11 @@ document.addEventListener('DOMContentLoaded', () => {
   </div>
   <div class="post-actions">
     <div class="vote">
-      <button class="upvote">
+      <button class="upvote"  value=${post.id}>
         <i class="fa fa-arrow-up"></i>
       </button>
       <span class="vote-count">12</span>
-      <button class="downvote">
+      <button class="downvote"  value=${post.id}>
         <i class="fa fa-arrow-down"></i>
       </button>
     </div>
@@ -44,6 +61,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
     `;
           document.querySelector('.card-container').innerHTML += card;
+        });
+        const upvoteButtons = document.querySelectorAll('.upvote');
+        upvoteButtons.forEach((btn) => {
+          btn.addEventListener('click', () => {
+            voteFunction({postId: btn.value, voteStatus: true});
+          });
+        });
+        const downvoteButton = document.querySelectorAll('.downvote');
+        downvoteButton.forEach((btn) => {
+          btn.addEventListener('click', () => {
+            voteFunction({postId: btn.value, voteStatus: false});
+          });
         });
       });
   logoutBtn.addEventListener('click', () => {

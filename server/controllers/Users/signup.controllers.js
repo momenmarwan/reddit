@@ -18,7 +18,7 @@ const signup = (req, res, next) => {
         req.user = rows[0];
       })
       .then(() => {
-        return jwtSignAsync({email, username});
+        return jwtSignAsync({email, id: req.user.id, username});
       })
       .then((token) => {
         res.cookie('token', token),
