@@ -1,0 +1,258 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Noto Sans', sans-serif;
+}
+.header {
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.header__logo img {
+  height: 50px;
+}
+
+.header__search-form {
+  display: flex;
+  align-items: center;
+}
+
+.header__search-form input[type="text"] {
+  border: none;
+  background-color: #f7f7f7;
+  padding: 10px;
+  font-size: 16px;
+  width: 300px;
+  margin-right: 10px;
+}
+
+.header__search-form button[type="submit"] {
+  border: none;
+  background-color: #f7f7f7;
+  padding: 10px;
+  font-size: 16px;
+}
+
+.header__user-name {
+  margin-right: 10px;
+}
+
+.header__user {
+  display: flex;
+  align-items: center;
+}
+
+.header__user-icons a {
+  color: #333;
+  margin-right: 10px;
+}
+
+.header__logout {
+  margin-right: 10px;
+}
+@media (max-width: 768px) {
+  .header__search-form {
+    display: none;
+  }
+
+  .header__user-name {
+    display: none;
+  }
+
+  .header__logout {
+    display: none;
+  }
+
+  .header__toggle.active .header__search-form {
+    display: flex;
+    margin-bottom: 20px;
+  }
+
+  .header__toggle.active .header__menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+
+  .header__toggle.active .header__menu a {
+    color: #333;
+    margin-bottom: 20px;
+  }
+
+  .header__toggle.active .header__user {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+
+  .header__toggle.active .header__user-name {
+    display: inline-block;
+    margin-right: 10px;
+  }
+
+  .header__toggle.active .header__logout {
+    display: inline-block;
+    padding: 10px;
+    background-color: #f7f7f7;
+    color: #333;
+    border: none;
+    margin-top: 20px;
+    cursor: pointer;
+  }
+
+  .header__toggle.active .header__logo {
+    margin-bottom: 20px;
+  }
+}
+.post-card {
+  background-color: #fff;
+  padding: 20px;
+  margin: 20px 0;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+}
+
+.post-card h2 {
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.form-group {
+  margin-bottom: 10px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+input[type="text"],
+input[type="url"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-bottom: 1px solid #ccc;
+  font-size: 16px;
+  color: #333;
+  background-color: #f7f7f7;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+textarea {
+  resize: vertical;
+}
+
+button[type="submit"] {
+  padding: 10px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .post-card {
+    margin: 20px 10px;
+  }
+}
+.post-card {
+  background-color: #fff;
+  padding: 20px;
+  margin: 20px 0;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.user-avatar {
+  margin-right: 10px;
+}
+
+.user-avatar img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.user-name h3 {
+  margin: 0;
+  font-size: 18px;
+  color: #333;
+}
+
+.user-name span {
+  font-size: 14px;
+  color: #777;
+}
+
+.post-content {
+  margin-bottom: 10px;
+}
+
+.post-content h2 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-size: 24px;
+  color: #333;
+}
+
+.post-content p {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-size: 16px;
+  color: #555;
+  line-height: 1.5;
+}
+
+.post-content img {
+  display: block;
+  max-width: 100%;
+  margin-bottom: 10px;
+}
+
+.post-actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid #ccc;
+  padding-top: 10px;
+}
+
+.vote {
+  display: flex;
+  align-items: center;
+}
+
+.vote button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 24px;
+  color: #333;
+}
+
+.vote-count {
+  margin: 0 10px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+}
+
+.comment-btn {
+  background-color: transparent;
+  border: none;
+  cursor

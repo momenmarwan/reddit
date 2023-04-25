@@ -1,7 +1,7 @@
 const {compare} = require('bcrypt');
-const {getUserByEmail} = require('../database/query/index');
-const {loginSchema, jwtSignAsync} = require('../utils/index');
-const {customError} = require('../middleware/errorHandler.middleware');
+const {getUserByEmail} = require('../../database/query/index');
+const {loginSchema, jwtSignAsync} = require('../../utils/index');
+const {customError} = require('../../middleware/errorHandler.middleware');
 
 const login = (req, res, next) => {
   const {body: {password, email, username}} = req;

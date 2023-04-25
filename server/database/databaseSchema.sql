@@ -35,6 +35,8 @@ CREATE TABLE comments_votes(
     id SERIAL PRIMARY KEY,
     comment_id INTEGER REFERENCES comments(id) ON DELETE CASCADE,
     post_id INTEGER REFERENCES posts(id) ON DELETE CASCADE,
-    CONSTRAINT unique_combination_comment UNIQUE (comment_id, post_id)
+    user_id INTEGER REFERENCES users(id) ON DELETE CASCADE,
+    vote_status BOOLEAN,
+    CONSTRAINT unique_combination_comment UNIQUE (comment_id, post_id, user_id)
 );
 COMMIT;

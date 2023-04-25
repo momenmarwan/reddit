@@ -1,4 +1,4 @@
-const {getPostQuery} = require('../database/query/index');
+const {getPostQuery} = require('../../database/query/index');
 const getPosts = (req, res, next) => {
   getPostQuery()
       .then(({rows}) => {

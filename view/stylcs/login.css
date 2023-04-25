@@ -1,0 +1,268 @@
+.par{
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4); 
+    display: none;
+  }
+.log-container{
+  position: relative;
+  background-color: #fff;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 28%;
+  border-radius: 18px;  
+ 
+}
+
+
+.par1{
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4); 
+  display: none;
+}
+.log-container1{
+  
+position: relative;
+background-color: #fff;
+margin: 15% auto;
+padding: 20px;
+border: 1px solid #888;
+width: 28%;
+border-radius: 18px;  
+
+}
+  
+  .login-span {
+    font-size: 1.6rem;
+    color: rgb(26,27,26);
+    display: block;
+    margin: 2rem 0 1.5rem 0;
+  }
+  
+  
+  .login-pargrph {
+    color: #1a1a1b;
+    font-family: Noto Sans,sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16p1.5rem;
+  }
+  
+ .input-form {
+    display: block;
+    margin: 0 auto;
+    width: 90%;
+    max-width: 500px;
+    height: 40px;
+    padding: 10px;
+    border: 1px solid #c7c7c7;
+    border-radius: 42px;
+    background-color: #F6F6F9;
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .login-btn {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 500px;
+    height: 40px;
+    padding: 10px;
+    border: none;
+    border-radius: 3px;
+    background-color: #ff4500;
+    color: #fff;
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+    cursor: pointer;
+    border-radius: 10px ;
+    margin-top: 15px;
+  }
+  
+
+  .login-span1 {
+    font-size: 1.6rem;
+    color: rgb(26,27,26);
+    display: block;
+    margin: 2rem 0 1.5rem 0;
+  }
+  
+  
+  .login-pargrph1 {
+    color: #1a1a1b;
+    font-family: Noto Sans,sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16p1.5rem;
+  }
+  
+  .input-form{
+    display: block;
+    margin: 0 auto;
+    width: 90%;
+    max-width: 500px;
+    height: 40px;
+    padding: 10px;
+    border: 1px solid #c7c7c7;
+    border-radius: 42px;
+    background-color: #F6F6F9;
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .login-btn1 {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 500px;
+    height: 40px;
+    padding: 10px;
+    border: none;
+    border-radius: 3px;
+    background-color: #ff4500;
+    color: #fff;
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+    cursor: pointer;
+    border-radius: 10px ;
+    margin-top: 15px;
+  }
+  
+  
+  .link {
+    color: #3F78D3;
+  }
+  
+  .link:hover {
+    text-decoration: underline;
+  }
+
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover, .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.container-box {
+  display: flex;
+  background-color: #ffffff;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  color: #1c1c1c;
+  margin-bottom: 16px;
+  width: 60%;
+}
+
+.bottom button {
+  display: flex;
+}
+
+.bottom button i {
+  margin-right: 10px;
+}
+
+.bottom {
+  display: flex;
+}
+
+
+.new {
+  display: block;
+  padding: 10px 16px;
+}
+
+.votes {
+  background: #F6F7F8;
+  padding: 5px 10px 0px 10px;
+
+}
+
+.top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.user {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.user img {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  margin-right: 6px;
+}
+
+.container-box h3 {
+  display: inline;
+  flex: 1;
+}
+
+.container-box i {
+  display: flex;
+  justify-content: center;
+}
+
+#updates-reddit {
+  display: flex;
+  align-items: center;
+}
+
+#updates-reddit button {
+  justify-content: space-between;
+}
+
+#update-scroll {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 15px;
+}
+
+#update-scroll button {
+  margin: 10px;
+}
+
+#inner-content {
+  border: none;
+  border-radius: 6px;
+  padding: 0px 15px 15px 0px;
+  width: 100%;
+}
+
+.post-img {
+  width: 100%;
+  border-radius: 4px;
+}
+
+#main {
+  flex: 5;
+}
+
+
+
+
+

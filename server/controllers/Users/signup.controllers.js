@@ -1,7 +1,7 @@
 const {hash} = require('bcrypt');
-const {signupSchema, jwtSignAsync} = require('../utils/index');
-const {addUser, getUserByEmail} = require('../database/query/index');
-const {customError} = require('../middleware/errorHandler.middleware');
+const {signupSchema, jwtSignAsync} = require('../../utils/index');
+const {addUser, getUserByEmail} = require('../../database/query/index');
+const {customError} = require('../../middleware/errorHandler.middleware');
 
 const signup = (req, res, next) => {
   const {body: {username, password, email}} = req;

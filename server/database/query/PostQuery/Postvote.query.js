@@ -1,4 +1,4 @@
-const {connection} = require('../../config/db.conf');
+const {connection} = require('../../../config/db.conf');
 
 const getAllVotes = ({userId, postId}) => {
   return connection.query(`SELECT * FROM post_votes WHERE user_id = $1 AND post_id = $2`, [userId, postId]);

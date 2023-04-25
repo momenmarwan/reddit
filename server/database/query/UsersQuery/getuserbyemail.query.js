@@ -1,4 +1,4 @@
-const {connection} = require('../../config/db.conf');
+const {connection} = require('../../../config/db.conf');
 
 const getUserByEmail = ({email}) => {
   const sql = {
