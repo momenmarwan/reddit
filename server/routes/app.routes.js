@@ -22,8 +22,8 @@ router.post('/add-post', addPost);
 router.post('/add-comment', addComment);
 router.put('/post-vote', postVote);
 router.get('/logout', logout);
-router.get('/get-comment-for-post/:postId', getAllCommentForPost);
 router.get('/get-posts', getPosts);
+router.get('/get-comment-for-post/:postId', getAllCommentForPost);
 router.get('/home', goHome);
 
 module.exports = {router};

@@ -11,6 +11,7 @@ CREATE TABLE users(
 CREATE TABLE posts(
     id SERIAL PRIMARY KEY,
     content TEXT NOT NULL,
+    post_title VARCHAR(200),
     img_url TEXT,
     created_at TIMESTAMP NOT NULL  DEFAULT NOW(),
     user_id INTEGER REFERENCES users(id) ON DELETE CASCADE

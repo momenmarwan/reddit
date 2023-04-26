@@ -7,6 +7,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const loginEmail = document.querySelector('.login-email');
   const loginPassword = document.querySelector('.login-password');
   const loginUsername = document.querySelector('.login-username');
+
+
   loginBtn.addEventListener('click', () => {
     fetch('/login', {
       method: 'POST',
@@ -43,6 +45,7 @@ document.addEventListener('DOMContentLoaded', () => {
     })
         .then((response) => response.json())
         .then((response) => {
+          console.log(response);
           if (response.status) {
             window.location.href = '/home';
           } else {
