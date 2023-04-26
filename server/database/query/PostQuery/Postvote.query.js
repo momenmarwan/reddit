@@ -1,12 +1,13 @@
 const {connection} = require('../../../config/db.conf');
 
 const getAllVotes = ({userId, postId}) => {
-  return connection.query(`SELECT * FROM post_votes WHERE user_id = $1 AND post_id = $2`, [userId, postId]);
+  return connection.query(`SELECT * FROM post_votes WHERE user_id = $1 AND post_id = $2 `, [userId, postId]);
 };
 
 
 const upDataVote = ({userId, postId, status}) => {
-  return connection.query(`UPDATE post_votes SET vote_status = $1 WHERE user_id = $2 AND post_id = $3`, [status, userId, postId]);
+  console.log(status, postId);
+  return connection.query(`UPDATE post_votes SET vote_status = $1 WHERE user_id = $2 AND post_id = $3 RETURNING *`, [status, userId, postId]);
 };
 
 

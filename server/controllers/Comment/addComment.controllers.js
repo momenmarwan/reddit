@@ -7,6 +7,7 @@ const addComment = (req, res, next) => {
         res.json({
           status: 201,
           massage: 'the comment has been added successfully',
+          author: req.decoded.username,
           rows,
         });
       })
