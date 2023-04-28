@@ -23,7 +23,6 @@ document.addEventListener('DOMContentLoaded', () => {
         .then((response) => {
           if (response.status == 200) {
             window.location.href = '/home';
-            console.log(response);
           } else {
             console.log('wrong');
           }
@@ -33,7 +32,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
   signupBtn.addEventListener('click', () => {
-    console.log('hey');
     fetch('/signup', {
       method: 'POST',
       headers: {'Content-Type': 'application/json'},
@@ -45,7 +43,6 @@ document.addEventListener('DOMContentLoaded', () => {
     })
         .then((response) => response.json())
         .then((response) => {
-          console.log(response);
           if (response.status) {
             window.location.href = '/home';
           } else {

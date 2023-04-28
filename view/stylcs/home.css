@@ -117,6 +117,26 @@
   margin: 20px 0;
   box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
 }
+.post-card-1{
+  width: 700px;
+  height: 500px;
+  background-color: #fff;
+  padding: 20px;
+  margin: 20px 0;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+}
+.post-card-1 .postImg{
+  object-fit: contain;
+ width: 90%;
+ height: 500%;
+}
+.card-container{
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: center;
+  justify-content: center;
+}
 
 .post-card h2 {
   color: #333;
@@ -252,11 +272,7 @@ button[type="submit"] {
   color: #333;
 }
 
-.comment-btn {
-  background-color: transparent;
-  border: none;
-  cursor : pointer ;
-}
+
 .comment-card {
   border: 1px solid #ccc;
   border-radius: 5px;
@@ -344,4 +360,110 @@ button[type="submit"] {
   font-size: 14px;
   line-height: 1.5;
   color: #333;
+}
+.comments {
+  margin-top: 1em;
+}
+
+.comment-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.comment-list li {
+  margin-bottom: 1em;
+}
+
+.comment-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.comment-author {
+  font-weight: bold;
+}
+
+.comment-date {
+  color: #aaa;
+}
+
+.comment-body {
+  margin-top: 0.5em;
+}
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+  position: relative; 
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 600px;
+}
+
+.close {
+  color: #ee8d8d;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+textarea {
+  width: 95%;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #E7402D;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #ee5a4a;
+}
+
+#open-modal {
+  margin-bottom: 20px;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.user-info img {
+  width: 30px;
+height: 30px;
+border-radius: 50%;
+margin-right: 10px;
+}
+
+.user-info span {
+  font-weight: bold;
+}
+
+.comment-card {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  padding: 10px;
+  margin-bottom: 10px;
 }

@@ -6,7 +6,6 @@ const getAllVotes = ({userId, postId}) => {
 
 
 const upDataVote = ({userId, postId, status}) => {
-  console.log(status, postId);
   return connection.query(`UPDATE post_votes SET vote_status = $1 WHERE user_id = $2 AND post_id = $3 RETURNING *`, [status, userId, postId]);
 };
 
